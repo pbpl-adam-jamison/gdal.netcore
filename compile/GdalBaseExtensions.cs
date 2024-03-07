@@ -32,7 +32,7 @@ namespace MaxRev.Gdal.Core
 
         internal static IEnumerable<string> GetPackageDataPossibleLocations(string runtimesPath, string libsharedFolder)
         {
-            var entryAsm = Assembly.GetEntryAssembly() ?? Assembly.GetCallingAssembly();
+            var entryAsm = Assembly.GetCallingAssembly();
             // assembly location can be empty with bundled assemblies
             var entryRoot =
                 new FileInfo(entryAsm.GetSourceLocation())
